@@ -1,0 +1,10 @@
+{
+  "plugin_id": "example.echo",
+  "version": "1.0.0",
+  "runtime_compatibility": "0.1",
+  "entry_point": "plugin_impl:invoke",
+  "capabilities": ["example.echo"],
+  "permissions": [],
+  "dependencies": [],
+  "package_checksum": "5dd074282fbe9a7a4c1d1b2c03045a91a9172446f1c8a141260c9444e2b2f44d"
+}

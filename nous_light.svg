@@ -1,0 +1,16 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- 白底圆角 -->
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="#ffffff"/>
+  <!-- 连线 -->
+  <g stroke="#cf4f15" stroke-width="22" stroke-linecap="round">
+    <line x1="256" y1="256" x2="256" y2="150"/>
+    <line x1="256" y1="256" x2="146" y2="366"/>
+    <line x1="256" y1="256" x2="366" y2="366"/>
+  </g>
+  <!-- 端点 -->
+  <circle cx="256" cy="132" r="42" fill="#ff7a33"/>
+  <circle cx="130" cy="382" r="38" fill="#cf4f15"/>
+  <circle cx="382" cy="382" r="38" fill="#cf4f15"/>
+  <!-- 中心(大) -->
+  <circle cx="256" cy="256" r="62" fill="#cf4f15"/>
+</svg>

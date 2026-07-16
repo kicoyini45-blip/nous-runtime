@@ -1,0 +1,29 @@
+[Unit]
+Description=Nous Runtime Daemon
+Documentation=https://github.com/nous-runtime/nous
+After=network.target
+
+[Service]
+Type=simple
+User=nous
+Group=nous
+WorkingDirectory=${NOUS_HOME:-/opt/nous}
+EnvironmentFile=${NOUS_HOME:-/opt/nous}/.env
+ExecStart=${NOUS_PYTHON:-/usr/bin/python3} -m nous_runtime.daemon.service
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nousd
+
+# Security
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=${NOUS_HOME:-/opt/nous}/data
+ReadOnlyPaths=${NOUS_HOME:-/opt/nous}
+
+[Install]
+WantedBy=multi-user.target

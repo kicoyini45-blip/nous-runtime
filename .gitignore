@@ -1,0 +1,108 @@
+# Nous Runtime Clean Room .gitignore
+
+# Nous runtime state
+.nous/
+
+# Secrets & credentials (never commit)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+config.local.json
+clients.json
+devices.json
+local.properties
+*.private.key
+
+# Databases & runtime data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+data/
+sessions/
+sessions.json
+sessions.json.*
+vector_data/
+llm_usage.json
+plan_export.json
+brain_memory.db
+
+# User content (documents, study materials, knowledge packs)
+learn_docs/
+
+# Logs
+*.log
+*.log.*
+
+# Audio recordings
+*.wav
+!examples/**/*.wav
+
+# Backups & archives
+*.bak
+*.bak*
+*.tar
+*.tar.gz
+*.zip
+backups/
+server_backup/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# Temporary
+.tmp*/
+tmp/
+temp/
+
+# Build
+build/
+dist/
+target/
+
+# Android / Gradle
+RemoteTerminal/local.properties
+RemoteTerminal/app/local.properties
+RemoteTerminal/.gradle/
+RemoteTerminal/.kotlin/
+RemoteTerminal/build/
+RemoteTerminal/app/build/
+*.apk
+
+# Desktop / Node
+node_modules/
+
+# IDE
+.idea/
+.claude/
+.agents/
+*.code-workspace
+
+# OS noise
+Thumbs.db
+.DS_Store
+
+# Large artifacts (images, binaries excluded unless explicitly allowed)
+*.img
+*.bin
+*.xlsx
+*.docx
+
+# Pack registry (runtime data, persists across CLI calls)
+remote_terminal/data/pack_registry.json
